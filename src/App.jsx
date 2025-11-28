@@ -60,6 +60,10 @@ export default function App() {
     if (!scene) return alert("Generate a scene first");
     setExporting(true);
     setBusy(true);
+
+    // Show working popup immediately
+    alert("We are working.....");
+
     try {
       const res = await axios({
         url: `${API_BASE}/export`,
@@ -129,6 +133,13 @@ export default function App() {
           Download Preview (PNG)
         </button>
       </div>
+
+      {/* Inline status banner */}
+      {exporting && (
+        <div style={{ marginTop: 8, padding: 8, borderRadius: 6, background: "#fff4cc", color: "#7a5a00" }}>
+          We are working….. Generating your video, please wait.
+        </div>
+      )}
 
       <div className="preview">
         {scene ? (
