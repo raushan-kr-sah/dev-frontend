@@ -6,11 +6,11 @@ export default defineConfig({
   server: {
     proxy: {
       '/generate': {
-        target: 'http://localhost:3000',
+        target: 'https://dev-backend-2qet.onrender.com',
         changeOrigin: true,
       },
       '/export': {
-        target: 'http://localhost:3000',
+        target: 'https://dev-backend-2qet.onrender.com',
         changeOrigin: true,
       },
     },

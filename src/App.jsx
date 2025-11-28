@@ -19,7 +19,7 @@ export default function App() {
   const [exporting, setExporting] = useState(false);
   const [busy, setBusy] = useState(false); // NEW: global in-flight guard
 
-  const API_BASE = import.meta.env.VITE_API_BASE || "http://localhost:3000"; // set to your backend port
+  const API_BASE = import.meta.env.VITE_API_BASE || "https://dev-backend-2qet.onrender.com"; // set to your backend port
 
   const generate = async () => {
     if (busy || loading) return; // prevent double-clicks
