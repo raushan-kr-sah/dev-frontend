@@ -61,9 +61,6 @@ export default function App() {
     setExporting(true);
     setBusy(true);
 
-    // Show working popup immediately
-    alert("We are working.....");
-
     try {
       const res = await axios({
         url: `${API_BASE}/export`,
